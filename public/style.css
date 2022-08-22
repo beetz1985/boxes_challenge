@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.box-parent {
+    display:flex;
+}
+
+.box-parent > * {
+    height:100px;
+    width: 100px;
+    border: 1px solid rgb(104, 104, 105);
+    margin: 5px;
+}
+
