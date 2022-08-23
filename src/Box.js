@@ -2,21 +2,14 @@ import React from 'react';
 
 
 function Box(props) {
-
-    const [state, setState] = React.useState(props.on);
+    
 
     const styles = {
-        backgroundColor: state ? "#222222" : "transparent"
-    };
-
-    function handleClick() {
-        setState((v)=>{
-            return (v) ? false : true;
-        })
+        backgroundColor: (props.on) ? "#222222" : "#cccccc" 
     }
-
+    
     return (
-        <div key={props.id} on={props.on} style={styles} onClick={handleClick}></div>
+        <div key={props.id} on={props.on} style={styles} onClick={()=>props.toggle(props.id)}></div>
     )
 }
 
